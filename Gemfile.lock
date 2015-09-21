@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    azure_doc (0.1.0)
+      thor
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.4.2)
+    thor (0.19.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  azure_doc!
+  bundler (~> 1.9)
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.10.5
