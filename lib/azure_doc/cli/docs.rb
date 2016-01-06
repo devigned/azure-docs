@@ -28,10 +28,7 @@ DESC
 
       def generate_java_docs(path)
         Dir.chdir File.expand_path(File.join(@root, path)) do
-          run('mvn javadoc:javadoc') do |out, err, _|
-            puts "#{out}" unless out.nil?
-            puts "#{err}" unless err.nil?
-          end
+          run('mvn javadoc:javadoc')
         end
       end
     end

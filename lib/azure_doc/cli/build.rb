@@ -25,10 +25,7 @@ module AzureDocs
 
       def maven_compile(path)
         Dir.chdir File.expand_path(File.join(@root, path)) do
-          run('mvn compile') do |out, err, _|
-            puts "#{out}" unless out.nil?
-            puts "#{err}" unless err.nil?
-          end
+          run('mvn compile')
         end
       end
     end
