@@ -2,15 +2,20 @@ module AzureDocs
   module Utils
     module Cmd
       def run(cmd)
+        say("running: #{cmd}")
         Open3.popen3(cmd) do |_, stdout, stderr, thread|
-          { :out => stdout, :err => stderr }.each do |key, stream|
+          {:out => stdout, :err => stderr}.each do |key, stream|
             Thread.new do
               until (line = stream.gets).nil? do
                 # yield the block depending on the stream
-                if key == :out
-                  yield line, nil, thread if block_given?
+                if block_given?
+                  if key == :out
+                    yield line, nil, thread
+                  else
+                    yield nil, line, thread
+                  end
                 else
-                  yield nil, line, thread if block_given?
+                  say(line)
                 end
               end
             end
