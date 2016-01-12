@@ -1,39 +1,56 @@
-*.gem
-*.rbc
-*.log
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
+projects/*
+targets/*
 
-## Specific to RubyMotion:
-.dat*
-.repl_history
-build/
+# Visual Studio #
+.settings/
+.vs/
+.vscode/
+/app.js
+/xPlat.sln
+*.suo
+*.user
+.ntvs_analysis.*
+*.njsproj
+*.etl
+*.etl.tmp
+*.vspx
+*.njsperf
+Microsoft.NodejsTools.WebRole.dll
 
-## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
+# Node #
+node_modules/
+npm-debug.log
+azure.err
+azure_error
 
-## Environment normalisation:
-/.bundle/
-/vendor/bundle
-/lib/bundler/man/
+# Builds #
+out/*
+tmp/*
+obj/
+out/
+checkstyle-result.xml
+test-result.xml
+iisnode.yml
+*.nupkg
 
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
-# .ruby-version
-# .ruby-gemset
+# Mac OS #
+.DS_Store
+.DS_Store?
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# Windows #
+Thumbs.db
 
-.ruby-version
-.idea
+# WebStorm #
+.idea/
+
+# Linux #
+*.swp
+
+# Test Logs #
+test/output/*
+coverage
+
+azure/
+.repo/
+.publish/
+dist/
